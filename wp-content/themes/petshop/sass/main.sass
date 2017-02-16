@@ -2,6 +2,28 @@ $font: 'Montserrat', sans-serif
 $cor1: #00B1F3
 $cor2: #00CD2A
 
+h1
+    color: $cor1
+    font-size: 50px
+    border-top: 5px solid $cor2
+    border-bottom: 5px solid $cor2
+    padding-top: 10px
+    padding-bottom: 10px
+    text-align: center
+    font-weight: bold
+    margin-bottom: 50px
+    
+.texto
+    padding-bottom: 50px
+    font-size: 16px
+    
+    .input-group
+        width: 100% !important
+    
+    #nome, #telefone, #email, #mensagem
+        width: 100% !important
+        margin-bottom: 20px
+        
 h2
     font-size: 35px
     font-weight: bold
@@ -10,6 +32,47 @@ h2
     padding-bottom: 5px
     border-bottom: 5px solid $cor2
     margin-bottom: 50px
+    
+.rowSingle, .rowArchive
+    padding-bottom: 100px
+    
+article
+    
+    h2
+        border: none
+        font-size: 25px
+        margin-bottom: 0
+        
+#sidebar
+    background-color: darken(#fff, 5%)
+    border-left: 5px solid $cor2
+    min-height: 500px
+    
+    h3
+        color: $cor1
+        
+    ol 
+        counter-reset: item
+        
+        li
+            display: block
+            margin-bottom: 10px
+            border-bottom: 2px solid #ddd
+            
+            &:before
+                content: counter(item) ". "
+                counter-increment: item
+                color: $cor1
+                font-weight: bold
+
+    a
+        font-size: 16px
+        color: $cor2
+        
+        &:hover
+            color: darken($cor1, 10%)
+            font-weight: bold
+            text-decoration: none
     
 h3, h4
     color: $cor2
@@ -61,13 +124,21 @@ section
     .rowSlider
         padding-left: 50px
         padding-right: 50px
+        padding-bottom: 20px
         margin-bottom: 50px
+        border-bottom: 1px solid #ddd
         
         #slider .carousel-indicators
             bottom: 0 !important
             
+        .carousel-caption
+            background-color: #000
+            opacity: .7 
+            width: 50%
+            
     .rowSobre 
         padding-bottom: 50px
+        border-bottom: 1px solid #ddd
     
         p
             padding-left: 50px
@@ -96,6 +167,7 @@ section
             
     .rowBlog
         padding-bottom: 50px
+        border-bottom: 1px solid #ddd
         
         .col-sm-4
             background-color: darken(#fff, 5%)
@@ -115,15 +187,6 @@ section
                         opacity: .7
                         transition: all .5s linear
                 
-                    h3
-                        top: 40%
-                        left: 20%
-                        border-radius: 5px
-                        font-weight: bold
-                        background-color: $cor2
-                        color: #fff
-                        transition: all .5s linear
-                
                 h3
                     position: absolute
                     top: 0
@@ -137,6 +200,12 @@ section
                     transition: all .5s linear
                     z-index: 300
                     
+                    &:hover
+                        font-weight: bold
+                        background-color: $cor2
+                        color: #fff
+                        transition: all .5s linear                    
+                    
                 .pelicula
                     display: none
                     width: 100%
@@ -148,7 +217,7 @@ section
                     z-index: 200
                     
             
-            a
+            a.leia
                 color: $cor1
                 transition: all .5s linear
                 
@@ -161,6 +230,7 @@ section
                 
     .rowFotos
         padding-bottom: 50px
+        border-bottom: 1px solid #ddd
         
         p
             font-size: 16px
@@ -185,6 +255,9 @@ section
             .input-group-addon
                 background-color: darken($cor1,10%)
                 color: #fff
+                
+        textarea
+            height: 100px !important
                 
 footer
     padding-top: 30px
